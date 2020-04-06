@@ -5,22 +5,22 @@ from math import sqrt
 app = Flask(__name__)
 
 @app.route('/')
-def primos():
-    p = 2
-    n = 3
+def p():
+    c = 0
+    n = 2
+    lista = []
 
-    primos = '1, 2'
-    while p < 100:
-        x = 1
+    while c <= 100:
+        normal = False
         for k in range(2, n):
             if n % k == 0:
-                x = 0
+                normal = True
                 break
-        if (x):
-            primos = primos + str(n) + ','
-            p += 1
+        if not normal:
+            c += 1
+            lista.append(n)
         n += 1
-    return primos
+    return lista
 
 
 if __name__ == "__main__":
