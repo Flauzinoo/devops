@@ -9,7 +9,7 @@ def primos():
     p = 2
     n = 3
 
-    primos = '1, 2'
+    primos = '1, 2, '
     while p < 100:
         x = 1
         for k in range(2, n):
